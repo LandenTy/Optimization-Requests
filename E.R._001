@@ -1,0 +1,58 @@
+"""
+Project: Code_Optimization_1
+Changes:
+  1. Reduced Project Size
+  2. Optimized Conditional Statements
+  3. Added Spacebar Functionality
+"""
+
+# ---- Libraries ---- #
+import random
+import pygame
+
+# ---- Prerequisites ---- #
+pygame.init()
+running = True
+
+screen_height = 0
+screen_width = 0
+
+screen = pygame.display.set_mode((screen_height, screen_width))
+
+# ---- Program ---- #
+
+num = int(input("Enter your favorite number: "))
+
+if num == 101:
+    
+    print("That's also my favorite number. ")
+
+else:
+    print("Nice! ")
+    
+food = input("What is your favorite food? ")
+
+if food == "pizza":
+    
+    print("That's also my favorite food! ")
+    
+else:
+    
+    print("Yummy. ")
+    
+print()
+
+if food == "pizza" and num == 101:
+    
+    print("We have a lot in common! Let's also see a random number:")
+    print(random.randint(0, 10))
+    
+print("Cool, now let's check something cool out!") 
+
+while running:
+    
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                print()
+                print("You pressed the Spacebar!")
